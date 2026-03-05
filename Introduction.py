@@ -21,5 +21,8 @@ cv2.destroyAllWindows   #when key pressed all windows are destroyed
 #saving changes from one image to another
 cv2.imwrite('newimg1.png', img)
 
-print(img) #image is taken in and pixels are grouped with each other through a nump array
+print(img.shape) #image is taken in and pixels are grouped with each other through a nump array
+#height, weidth,channel is how the order is 
 
+
+print(img[100][45])
