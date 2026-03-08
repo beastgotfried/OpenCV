@@ -15,9 +15,9 @@ while(True):
     
     #creating mask
     mask= cv2.inRange(hsv,lower_blue,upper_blue) #this will only return pixels that are in the range of the  colors i gave above, the other pixels will be completely blacked out
-    result =cv2.bitwise_and(hsv,hsv,mask=mask)
+    result =cv2.bitwise_and(hsv,hsv,mask=mask) #masking
     
-    cv2.imshow('nigger', result)
+    cv2.imshow('nigger', mask)
     
     if cv2.waitKey(1)==ord('q'):
         break
