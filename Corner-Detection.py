@@ -24,11 +24,11 @@ while (True):
         for j in range(i+1,len(corners)):  #traversing between missed corners so that 2 corners dont collide
             corner1=tuple(corners[i][0])   #converting corners into tuple so that data can be easily taken from
             corner2=tuple(corners[j][0])
-            color= tuple(map(lambda x:int (x), np.random.randint(0,255,size=3)))   #randomise values from 0,254 and apply  int values to all of them and then convert them into a tuple becuase thats what opencv accepts
+            color= tuple(map(lambda x:int (x), np.random.randint(254,255,size=1)))   #randomise values from 0,254 and apply  int values to all of them and then convert them into a tuple becuase thats what opencv accepts
             cv2.line(img,corner1,corner2,color,3)
     
     
-    cv2.imshow('nigger', img)
+    cv2.imshow('output', img)
     
     
     if cv2.waitKey(1)==ord('q'):
